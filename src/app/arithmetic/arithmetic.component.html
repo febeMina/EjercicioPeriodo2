@@ -1,0 +1,124 @@
+<img src="assets/media/img/ang3.png" class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100; opacity: 0.75;">
+<div class="container btn-close-white">
+<label><h1>Operaciones Aritméticas</h1></label>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="form-group">
+                <label for="num1">Ingrese número 1:</label>
+                <input type="number" id="num1" class="form-control" [(ngModel)]="num1"><hr>
+            </div>
+            <div class="form-group">
+                <label for="num2">Ingrese número 2:</label>
+                <input type="number" id="num2" class="form-control" [(ngModel)]="num2"><hr>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+      <!-- Sección 1: Operaciones sencillas -->
+      <div class="col-md-6">
+        <div class="mb-3 text-center">
+          <!-- Label centrado con fondo blanco -->
+          <label>Operaciones Sencillas</label><br><br>
+  
+          <!-- Botones de operaciones sencillas en 2 columnas -->
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showSum()">
+                <i class="fa fa-plus"></i> Mostrar Suma
+              </button><br><br>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showResta()">
+                <i class="fa fa-minus"></i> Mostrar Resta
+              </button><br><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showMultiply()">
+                <i class="fa fa-times"></i> Mostrar Multiplicación
+              </button><br><br>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showDivide()">
+                <i class="fas fa-divide"></i> Mostrar División
+              </button><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Sección 2: Operaciones complejas -->
+      <div class="col-md-6">
+        <div class="mb-3 text-center">
+          <!-- Label centrado con fondo blanco -->
+          <label>Operaciones Complejas</label><br><br>
+  
+          <!-- Botones de operaciones complejas en 2 columnas -->
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showSqrtNum1()">
+                <i class="fa fa-square-root"></i> Mostrar Raíz Cuadrada Número 1
+              </button><br><br>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showSqrtNum2()">
+                <i class="fa fa-square-root"></i> Mostrar Raíz Cuadrada Número 2
+              </button><br><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-danger" (click)="showLogNum1()">
+                    <i class="fa fa-bar-chart"></i> Mostrar Logaritmación Número 1
+                  </button><br><br>
+              
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-danger" (click)="showLogNum2()">
+                    <i class="fa fa-bar-chart"></i> Mostrar Logaritmación Número 2
+                  </button><br><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showExpNum1()">
+                <i class="fa fa-exclamation"></i> Mostrar Exponencial Número 1
+              </button><br><br>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showExpNum2()">
+                <i class="fa fa-exclamation"></i> Mostrar Exponencial Número 2
+              </button><br><br>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-danger" (click)="showPower()">
+                    <i class="fa fa-caret-square-o-up"></i> Mostrar Potenciación
+                </button><br><br>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-danger" (click)="showRoot()">
+                <i class="fa fa-check-square-o"></i> Mostrar Radicación
+              </button><br><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <button class="btn btn-danger" (click)="showGCD()">
+                <i class="fa fa-percent"></i> Mostrar Factor Común
+              </button><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Otras secciones o contenido aquí si es necesario -->
+  </div>
+  

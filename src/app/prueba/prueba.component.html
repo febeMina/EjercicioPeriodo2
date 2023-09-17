@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>{{title}}</h1>
+        <label>OPERANDO 1</label>
+            <input type="text" [(ngModel)]="n1">
+            <br>
+        <label>OPERANDO 2</label>
+            <input type="text" [(ngModel)]="n2">
+            <br> 
+        <div class="row">
+              <div class="col">
+                <button type="button" class="btn btn-warning" (click)="setOperador('+')">SUMA</button>
+                <br>
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-danger" (click)="setOperador('-')">RESTA</button>
+                <br>
+              </div>
+            <div class="w-100"></div>
+              <div class="col">
+                <button type="button" class="btn btn-danger" (click)="setOperador('*')">MULTIPLICACION</button>
+               <br>
+               <br>
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-warning" (click)="setOperador('/')">DIVISION</button>
+                <br>
+                <br>
+              </div>
+              <div class="w-100"></div>
+              <div class="col">
+                <label><b>RESULTADO: </b>{{resultado}}</label>
+              </div>
+        </div> 
+  </div>
+  
+
+
