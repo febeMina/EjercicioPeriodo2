@@ -1,17 +1,15 @@
 <img src="assets/media/img/3.jpg" class="img-fluid" style="position: absolute; right: -10; top: -10; z-index: -100; opacity: 0.50;">
 <div class="container btn-close-white">
-    <div class="container text-center"> <!-- Agregamos la clase text-center para centrar contenido horizontalmente -->
-        <h1>Operaciones Aritméticas</h1>
-      </div>
+    <div class="text-center"> 
+        <h1>CALCULADORA CIENTIFICA</h1>
+    </div>
     <div class="row">
         <div class="col-md-4 offset-md-4">
             <div class="form-group">
-                <label for="num1">Ingrese número 1:</label>
-                <input type="number" id="num1" class="form-control" [(ngModel)]="num1"><br>
+                <h6 for="num1">Ingrese número 1 <input type="number" id="num1" class="form-control" class="alert alert-success" [(ngModel)]="num1"> </h6>
             </div>
             <div class="form-group">
-                <label for="num2">Ingrese número 2:</label>
-                <input type="number" id="num2" class="form-control" [(ngModel)]="num2">
+                <h6 for="num2">Ingrese número 2 <input type="number" id="num2" class="form-control" class="alert alert-success" [(ngModel)]="num2"> </h6>
             </div>
         </div>
     </div>
@@ -19,115 +17,110 @@
 <hr>
 <div class="container">
     <div class="row">
-      <!-- Sección 1: Operaciones sencillas -->
-      <div class="col-md-6">
+    <div class="col-md-6">
         <div class="mb-3 text-center">
-          <!-- Label centrado con fondo blanco -->
-          <h1>Operaciones Sencillas</h1><br><br>
-  
-          <!-- Botones de operaciones sencillas en 2 columnas -->
-          <div class="row">
+        <h3>Operaciones sencillas</h3><br><br>
+
+        <!-- Botones de operaciones sencillas en 2 columnas -->
+        <div class="row">
             <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showSum()">
-                <i class="fa fa-plus"></i> Mostrar Suma
-              </button><br><br>
+            <button class="btn btn-danger btn-custom" (click)="showSum()">
+                <i class="fa fa-calculator"></i> Mostrar Suma
+            </button><br><br>
             </div>
             <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showResta()">
-                <i class="fa fa-minus"></i> Mostrar Resta
-              </button><br><br>
+            <button class="btn btn-danger btn-custom" (click)="showResta()">
+                <i class="fa fa-calculator"></i> Mostrar Resta
+            </button><br><br>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showMultiply()">
-                <i class="fa fa-times"></i> Mostrar Multiplicación
-              </button><br><br>
-            </div>
-            <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showDivide()">
-                <i class="fas fa-divide"></i> Mostrar División
-              </button><br><br>
-            </div>
-          </div>
         </div>
-      </div>
-  
-      <!-- Sección 2: Operaciones complejas -->
-      <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+            <button class="btn btn-danger btn-custom" (click)="showMultiply()">
+                <i class="fa fa-calculator"></i> Mostrar Multiplicación
+            </button><br><br>
+            </div>
+            <div class="col-md-6">
+            <button class="btn btn-danger btn-custom" (click)="showDivide()">
+                <i class="fa fa-calculator"></i> Mostrar División
+            </button><br><br>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Sección 2: Operaciones complejas -->
+    <div class="col-md-6">
         <div class="mb-3 text-center">
-          <!-- Label centrado con fondo blanco -->
-          <h3>Operaciones Complejas</h3><br><br>
-  
-          <!-- Botones de operaciones complejas en 2 columnas -->
-          <div class="row">
+        <!-- Label centrado con fondo blanco -->
+        <h3>Operaciones complejas</h3><br><br>
+
+        <!-- Botones de operaciones complejas en 2 columnas -->
+        <div class="row">
             <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showSqrtNum1()">
-                <i class="fa fa-square-root"></i> Mostrar Raíz Cuadrada Número 1
-              </button><br><br>
+            <button class="btn btn-danger btn-custom" (click)="showSqrtNum1()">
+                <i class="fa fa-calculator"></i> Mostrar Raíz Cuadrada Número 1
+            </button><br><br>
             </div>
             <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showSqrtNum2()">
-                <i class="fa fa-square-root"></i> Mostrar Raíz Cuadrada Número 2
-              </button><br><br>
+            <button class="btn btn-danger btn-custom" (click)="showSqrtNum2()">
+                <i class="fa fa-calculator"></i> Mostrar Raíz Cuadrada Número 2
+            </button><br><br>
             </div>
-          </div>
-          
-          <div class="row">
+        </div>
+        
+        <div class="row">
             <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showExpNum1()">
-                <i class="fa fa-exclamation"></i> Mostrar Exponencial Número 1
-              </button><br><br>
+            <button class="btn btn-danger btn-custom" (click)="showExpNum1()">
+                <i class="fa fa-calculator"></i> Mostrar Exponencial Número 1
+            </button><br><br>
             </div>
             <div class="col-md-6">
-              <button class="btn btn-danger btn-custom" (click)="showExpNum2()">
-                <i class="fa fa-exclamation"></i> Mostrar Exponencial Número 2
-              </button><br><br>
+            <button class="btn btn-danger btn-custom" (click)="showExpNum2()">
+                <i class="fa fa-calculator"></i> Mostrar Exponencial Número 2
+            </button><br><br>
             </div>
-          </div>
-          
-          <div class="row">
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-danger btn-custom" (click)="showSenoNum1()">
+                    <i class="fa fa-calculator"></i> Calcular Seno Número 1
+                </button><br><br>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-danger btn-custom" (click)="showSenoNum2()">
+                    <i class="fa fa-calculator"></i> Calcular Seno Número 2
+                </button><br><br>
+            </div>
+        </div>
+        
+        <div class="row">
             <div class="col-md-6">
                 <button class="btn btn-danger btn-custom" (click)="showSecanteNum1()">
                     <i class="fa fa-calculator"></i> Calcular Secante Número 1
-                  </button><br><br>
+                </button><br><br>
             </div>
             <div class="col-md-6">
                 <button class="btn btn-danger btn-custom" (click)="showSecanteNum2()">
                     <i class="fa fa-calculator"></i> Calcular Secante Número 2
-                  </button><br><br>
+                </button><br><br>
             </div>
-          </div>
-          
-<div class="row">
-    <div class="col-md-6">
-        <button class="btn btn-danger btn-custom" (click)="showSenoNum1()">
-            <i class="fa fa-calculator"></i> Calcular Seno Número 1
-          </button><br><br>
-    </div>
-    <div class="col-md-6">
-        <button class="btn btn-danger btn-custom" (click)="showSenoNum2()">
-            <i class="fa fa-calculator"></i> Calcular Seno Número 2
-          </button><br><br>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-md-6">
-        <button class="btn btn-danger btn-custom" (click)="showGCD()">
-            <i class="fa fa-percent"></i> Mostrar Factor Común
-          </button><br><br>    
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-danger btn-custom" (click)="showTangenteNum1()">
+                    <i class="fa fa-calculator"></i> Calcular Tangente Número 1
+                  </button><br><br><br>    
             </div>
             <div class="col-md-6">
                 <button class="btn btn-danger btn-custom" (click)="showPower()">
-                    <i class="fa fa-caret-square-o-up"></i> Mostrar Potenciación
+                    <i class="fa fa-calculator"></i> Mostrar Potenciación
                 </button><br><br>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  
-    <!-- Otras secciones o contenido aquí si es necesario -->
-  </div>
-  
+</div>
+</div>
+</div>
