@@ -22,8 +22,11 @@ export class ArithmeticComponent {
     power: number,
     logNum1: number,
     logNum2: number,
-    root: number,
-    gcd: number
+    gcd: number,
+    secanteNum1: number,
+    secanteNum2: number,
+    senoNum1: number,
+    senoNum2: number
   } = {
     sum: 0,
     resta: 0,
@@ -36,8 +39,12 @@ export class ArithmeticComponent {
     power: 0,
     logNum1: 0,
     logNum2: 0,
-    root: 0,
-    gcd: 0
+    gcd: 0,
+    secanteNum1: 0,
+    secanteNum2: 0,
+    senoNum1: 0,
+    senoNum2: 0
+    
   };
 
   showResults: boolean = false;
@@ -71,9 +78,9 @@ export class ArithmeticComponent {
     this.result.power = Math.pow(this.num1, this.num2);
     this.result.logNum1 = Math.log(this.num1);
     this.result.logNum2 = Math.log(this.num2);
-    this.result.root = Math.sqrt(Math.abs(this.num1));
     this.result.gcd = this.gcd(this.num1, this.num2);
-
+    this.result.secanteNum1 = 1 / Math.cos(this.num1);
+    
     // Mostrar los resultados
     this.showResults = true;
   }
@@ -129,7 +136,7 @@ export class ArithmeticComponent {
   showSqrtNum1() {
     if(this.validarNumeros()) {
       const sqrtNum1 = Math.sqrt(this.num1);
-      Swal.fire("Raiz cuadrada Número 1", `${Math.sqrt(this.num1)} = ${sqrtNum1}`, "info");
+      Swal.fire("Raiz cuadrada Número 1", `${this.num1} = ${sqrtNum1}`, "info");
     } else {
       Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
     }
@@ -139,7 +146,7 @@ export class ArithmeticComponent {
   showSqrtNum2() {
     if(this.validarNumeros()) {
       const sqrtNum2 = Math.sqrt(this.num2);
-      Swal.fire("Raiz cuadrada Número 2", `${Math.sqrt(this.num2)} = ${sqrtNum2}`, "info");
+      Swal.fire("Raiz cuadrada Número 2", `${(this.num2)} = ${sqrtNum2}`, "info");
     } else {
       Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
     }
@@ -149,7 +156,7 @@ export class ArithmeticComponent {
   showExpNum1() {
     if(this.validarNumeros()) {
       const expNum1 = Math.exp(this.num1);
-      Swal.fire("Exponencial Número 1", `${Math.exp(this.num1)} = ${expNum1}`, "info");
+      Swal.fire("Exponencial Número 1", `${(this.num1)} = ${expNum1}`, "info");
     } else {
       Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
     }
@@ -159,7 +166,7 @@ export class ArithmeticComponent {
     showExpNum2() {
     if(this.validarNumeros()) {
       const expNum2 = Math.exp(this.num2);
-      Swal.fire("Exponencial Número 2", `${Math.exp(this.num2)} = ${expNum2}`, "info");
+      Swal.fire("Exponencial Número 2", `${(this.num2)} = ${expNum2}`, "info");
     } else {
       Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
     }
@@ -196,15 +203,7 @@ export class ArithmeticComponent {
     }
   }
   
-   // funciones para mostrar los resultados Radicacion
-    showRoot() {
-    if(this.validarNumeros()) {
-      const root = Math.exp(this.num2);
-      Swal.fire("Radicacion", `${Math.sqrt(Math.abs(this.num1))} = ${root}`, "info");
-    } else {
-      Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
-    }
-  }
+
   
    // funciones para mostrar los resultados Factor Común
     showGCD() {
@@ -224,6 +223,52 @@ export class ArithmeticComponent {
     }
     return a;
   }
+  
+  // En tu componente TypeScript
+// Función para calcular la secante del número 1
+
+
+showSecanteNum1() {
+  if (this.validarNumeros()) {
+    const secanteNum1 = 1 / Math.cos(this.num1);
+    Swal.fire("Secante Número 1", `Secante(${this.num1}) = ${secanteNum1}`, "info");
+  } else {
+    Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
+  }
+}
+
+// Función para calcular la secante del número 2
+showSecanteNum2() {
+  if (this.validarNumeros()) {
+    const secanteNum2 = 1 / Math.cos(this.num2);
+    Swal.fire("Secante Número 2", `Secante(${this.num2}) = ${secanteNum2}`, "info");
+  } else {
+    Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
+  }
+}
+
+// Función para calcular el seno del número 1
+showSenoNum1() {
+  if (this.validarNumeros()) {
+    const senoNum1 = Math.sin(this.num1);
+    Swal.fire("Seno Número 1", `Seno(${this.num1}) = ${senoNum1}`, "info");
+  } else {
+    Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
+  }
+}
+
+// Función para calcular el seno del número 2
+showSenoNum2() {
+  if (this.validarNumeros()) {
+    const senoNum2 = Math.sin(this.num2);
+    Swal.fire("Seno Número 2", `Seno(${this.num2}) = ${senoNum2}`, "info");
+  } else {
+    Swal.fire("Error", "Por favor, ingresa valores válidos para num1 y num2", "error");
+  }
+}
+
+  
+  
 }
 
   
